@@ -1,4 +1,4 @@
-class Lemon < Formula
+class HomebrewLemon < Formula
   desc "C++ Library for Efficient Modeling and Optimization in Networks."
   homepage "https://lemon.cs.elte.hu/trac/lemon"
   url "http://lemon.cs.elte.hu/pub/sources/lemon-1.3.1.tar.gz"
