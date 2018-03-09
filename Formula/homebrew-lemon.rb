@@ -5,11 +5,10 @@ class HomebrewLemon < Formula
   sha256 "71b7c725f4c0b4a8ccb92eb87b208701586cf7a96156ebd821ca3ed855bad3c8"
 
   depends_on "glpk"
+  depends_on "cmake" => :build
 
   def install
-    system "mkdir", "./build"
-    system "cd", "./build"
-    system "cmake", "..", "-DLEMON_ENABLE_GLPK=YES"
+    system "cmake", ".", "-DLEMON_ENABLE_GLPK=YES", *std_cmake_args
     system "make", "install"
   end
 
